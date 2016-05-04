@@ -1,7 +1,6 @@
 .container-fluid {
     .menu, .content {
         color: #FF5146;
-        font-size: 24px;
         font-weight: 300;
         font-family: 'Ubuntu', sans-serif;
         background-color: #251F21;
@@ -9,42 +8,85 @@
 }
 .menu {
     height: 100vh;
+    padding-top: 20px;
+    font-size: 24px;
+    
     .logo {
         color: white;
     }
     img {
-        height: 64px;
+        height: 60px;
         padding-right: 5px;
+        padding-bottom: 5px;
     }
     .lang, .logo, .bookmark_about, .bookmark_projects {
         padding-bottom: 30px;
+    }
+    .social {
+        padding-bottom: 20px;
     }
 }
 .content {
     overflow-y: scroll;
     height: 100vh;
-    padding: 0;
+    font-size: 18px;
     .content_main {
         height: 100vh;
         background-image: url(../img/bg_main.jpe);
         background-size: cover;
-        background-repeat: none;
-        // background-position: 
         h1 {
             font-weight: 300;
-            font-size: 60px;
+            font-size: 50px;
             display: inline-block;
             padding-bottom: 1rem;
             border-bottom: 5px solid #FF5146;
-            text-shadow: 0 1px 2px black;
+            
         }
     }
     .content_about {
         height: 100vh;
         background-image: url(../img/bg_about.jpg);
         background-size: cover;
-        background-repeat: none;
-        // background-position: 
 
+    }
+    .content_projects {
+        height: 100vh;
+        background-image: url(../img/work.jpg);
+        background-size: cover;
+
+    }
+    .content_contacts {
+        height: 100vh;
+        background-image: url(../img/bg_contact.jpg);
+        background-size: cover;
+        a {
+            color: white;
+            &:hover {
+                // text-decoration: none;
+                
+            }
+        }
+        img {
+            height: 60px;
+        }
+    }
+    p {
+        border-bottom: 3px solid #FF5146;
+    }
+}
+.project {
+    position: relative;
+    .cover {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+        opacity: 0;
+        transition: opacity 0.2s linear;
+        &:hover {
+            opacity: 0.7;
+        }
     }
 }
