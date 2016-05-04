@@ -1,3 +1,5 @@
+@import '../bower_components/hover/less/hover.less';
+
 .display-table {
     display: table;
     width: 100%;
@@ -13,4 +15,27 @@
 }
 .inl-bl {
     display: inline-block;
+
+}
+
+.underline {
+    .underline-from-center();
+    &:before {
+        background: #FF5146;
+        height: 2px;
+    }
+}
+.underline-contact {
+    .underline-from-center();
+    &:before {
+        background: white;
+        height: 2px;
+    }
+}
+.radial {
+    .radial-out();
+    background-color: transparent;
+    &:before {
+        background: #FF5146;
+    }
 }

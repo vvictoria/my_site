@@ -10,17 +10,21 @@
     height: 100vh;
     padding-top: 20px;
     font-size: 24px;
-    
+    overflow-y: auto;
+
+
     .logo {
         color: white;
+        display: block;
     }
     img {
-        height: 60px;
+        height: 30px;
         padding-right: 5px;
         padding-bottom: 5px;
     }
-    .lang, .logo, .bookmark_about, .bookmark_projects {
-        padding-bottom: 30px;
+    .lang, .logo, .bookmark_about, .bookmark_projects, .bookmark_contacts {
+        padding-bottom: 5px;
+        margin-bottom: 10px;
     }
     .social {
         padding-bottom: 20px;
@@ -30,18 +34,17 @@
     overflow-y: scroll;
     height: 100vh;
     font-size: 18px;
+    h1 {
+        font-weight: 300;
+        font-size: 50px;
+        border-bottom: 5px solid #FF5146;
+        display: inline-block;
+        padding-bottom: 1rem;
+    }
     .content_main {
         height: 100vh;
         background-image: url(../img/bg_main.jpe);
         background-size: cover;
-        h1 {
-            font-weight: 300;
-            font-size: 50px;
-            display: inline-block;
-            padding-bottom: 1rem;
-            border-bottom: 5px solid #FF5146;
-            
-        }
     }
     .content_about {
         height: 100vh;
@@ -69,6 +72,13 @@
         img {
             height: 60px;
         }
+        .contact {
+            img {
+                display: block;
+                margin: 20px auto;
+            }
+            padding: 20px 0;
+        }
     }
     p {
         border-bottom: 3px solid #FF5146;
@@ -76,6 +86,8 @@
 }
 .project {
     position: relative;
+    margin-bottom: 30px;
+
     .cover {
         position: absolute;
         top: 0;
@@ -88,5 +100,13 @@
         &:hover {
             opacity: 0.7;
         }
+    }
+}
+a {
+    color: #FF5146;
+    &:hover {
+        text-decoration: none;
+        color: #FF5146;
+        
     }
 }
