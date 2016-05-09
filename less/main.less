@@ -88,6 +88,8 @@
     position: relative;
     margin-bottom: 30px;
 
+    cursor: default; // or "cursor: pointer" for link style
+
     .cover {
         position: absolute;
         top: 0;
@@ -100,6 +102,8 @@
         &:hover {
             opacity: 0.7;
         }
+        display: flex;
+        align-items: center;
     }
 }
 a {
@@ -107,6 +111,10 @@ a {
     &:hover {
         text-decoration: none;
         color: #FF5146;
-        
+    }
+    &:active, &:focus { // This removes the blue color of the link after it was clicked
+        color: #FF5146;
+        text-decoration: none;
+        outline: 0 none; // This removes the dotted border on the cliicked link
     }
 }
