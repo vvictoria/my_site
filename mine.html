@@ -5,42 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Creating awesome websites</title>
+    <meta name="theme-color" content="#251F21" />
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="bower_components/dom-i18n/dist/dom-i18n.min.js"></script>
     <link rel="stylesheet" href="css/styles.css"> <!-- CSS!!!!!!! a не less/scss -->
 
     <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700,300' rel='stylesheet' type='text/css'>
 </head>
 <body>
     <div class="container-fluid">
+        <div id="nav">
+            <a href="#" id="show-menu">
+                <img src="img/bars.png" class="pull-right" width="32" alt="" />
+            </a>
+        </div>
         <div class="row">
-            <div class="menu col-xs-3 text-center">
+            <div class="menu col-sm-3 text-center">
                 <div class="lang">
                     <img src="img/language.png" alt="globe" class="globe">
-                    <a href="#" class="ua underline">ua</a>
-                    <a href="#" class="en underline">en</a>
+                    <a href="#" class="en underline" data-translatable>
+                        <span>en</span>
+                        <span>анг</span>
+                    </a>
+                    <a href="#" class="uk underline" data-translatable>
+                        <span>uk</span>
+                        <span>укр</span>
+                    </a>
                 </div>
-                <a href="#index" class="logo text-uppercase radial">
-                    Creating<br>
-                    awesome<br>
-                    websites
+                <a href="#index" class="logo text-uppercase radial" data-translatable>
+                    <span>
+                        Creating<br>awesome<br>websites
+                    </span>
+                    <span>
+                        Створення<br/>адских<br/>сторінок
+                    </span>
                 </a>
                 <div>
-                    <a href="#about" class="bookmark_about underline">
-                        About me
+                    <a href="#about" class="bookmark_about underline" data-translatable>
+                        <span>About me</span>
+                        <span>Про мене</span>
                     </a>
                 </div>
                 <div>
-                    <a href="#projects" class="bookmark_projects underline">
-                        My projects
+                    <a href="#projects" class="bookmark_projects underline" data-translatable>
+                        <span>My projects</span>
+                        <span>Мої проекти</span>
                     </a>
                 </div>
                 <div class="social">
-                    <a href="#contacts" class="bookmark_contacts underline">Contact me</a>
+                    <a href="#contacts" class="bookmark_contacts underline" data-translatable>
+                        <span>Contact me</span>
+                        <span>Контакти</span>
+                    </a>
                     <div>
                         <img src="img/gm-square.png" alt="gmail" class="gm img-circle list-inline">
                         <img src="img/fb.png" alt="facebook" class="fb list-inline">
@@ -50,161 +71,195 @@
                 </div>
             </div>
 
-            <div class="content col-xs-9">
-                <a name="index"></a>
-                <div class="content_main header_font text-center display-table">
-                    <div class="cell shadowed text-uppercase">
-                        <h1>Have the best<br>
-                        website</h1>
+            <div class="content col-xs-12 col-sm-9">
+                <div class="unshift">
+                    <a name="index"></a>
+                    <div class="content_main header_font text-center display-table">
+                        <div class="cell shadowed text-uppercase" data-translatable>
+                            <h1>Have the best<br>
+                            website</h1>
+                            <h1>МАЙ НАЙКРАЩИЙ<br>ВЕБ-САЙТ</h1>
+                        </div>
                     </div>
-                </div>
-                <div class="content_about regular-font display-table">
-                    <a name="about"></a>
-                    <div class="cell shadowed text-center">
-                        Hi!<br><br>
-                        My name is Vicky and I create websites.<br><br>
-                        If you want to have a classy landing-page, non-ordinary business-card site, or just have an amazing idea for a web-project &mdash; I'm ready to help you.<br><br>
-                        Besides working I like to travel, have active leisure, hang out at music-festivals and make acquaintances with new people.<br><br>
-                        Hope you'll enjoy our partnership! :)
+                    <div class="content_about regular-font display-table">
+                        <a name="about"></a>
+                        <div class="cell shadowed text-center padded-2x" data-translatable>
+                            <span>
+                                Hi!<br><br>
+                                My name is Vicky and I create websites.<br><br>
+                                If you want to have a classy landing-page, non-ordinary business-card site, or just have an amazing idea for a web-project &mdash; I'm ready to help you.<br><br>
+                                Besides working I like to travel, have active leisure, hang out at music-festivals and make acquaintances with new people.<br><br>
+                                Hope you'll enjoy our partnership! :)
+                            </span>
+                            <span>
+                                Привіт!<br><br>
+                                Мене звати Віка і я створюю веб-сайти.<br><br>
+                                Якщо ви хочете мати стильну цільову веб-сторінку, неординарний сайт-візитку, або Ви просто маєте дивовижну ідею для веб-проекту &mdash; я готова Вам допомогти.<br><br>
+                                Окрім роботи я люблю подорожувати, активно відпочивати, тусуватися на музичних фестивалях і знайомитися з новими людьми.<br><br>
+                                Сподіваюся, Вам сподобається наша співпраця! :)
+                            </span>
+                        </div>
                     </div>
-                </div>
-                <div class="content_projects display-table">
-                    <a name="projects"></a>
-                    <div class="cell text-center shadowed">
-                        <h1>My projects</h1>
-                        <div class="padded-2x">
+                    <div class="content_projects display-table">
+                        <a name="projects"></a>
+                        <div class="cell text-center shadowed" >
+                            <h1 data-translatable>
+                                <span>My projects</span>
+                                <span>Мої проекти</span>
+                            </h1>
+                            <div class="padded-2x">
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-4">
+                                        <div class="project">
+                                            <a href="http://vvictoria.github.io/scriptum/" target="_blank">
+                                                <img class="img-responsive" src="img/projects/scriptum-small.jpg" alt="scriptum">
+
+                                                <div class="cover">
+                                                <h3 class="margin-auto">
+                                                    Scriptum
+                                                </h3>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-4">
+                                        <div class="project">
+                                            <a href="https://vvictoria.github.io/UIcourse_lecture2-3/site/index.html" target="_blank">
+                                                <img class="img-responsive" src="img/projects/mountains-small.jpg" alt="mountains">
+
+                                                <div class="cover">
+                                                    <h3 class="margin-auto">
+                                                        Mountains
+                                                    </h3>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-4">
+                                        <div class="project">
+                                            <a href="http://vvictoria.github.io/parallax/" target="_blank">
+                                                <img class="img-responsive" src="img/projects/parallax-small.jpg" alt="paralax">
+
+                                                <div class="cover">
+                                                    <h3 class="margin-auto">
+                                                        Parallax
+                                                    </h3>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-4">
+                                        <div class="project">
+                                            <a href="http://vvictoria.github.io/UIcourse_lecture4-css/" target="_blank">
+                                                <img class="img-responsive" src="img/projects/joyvy-small.jpg" alt="joyvy">
+
+                                                <div class="cover">
+                                                    <h3 class="margin-auto" data-translatable>
+                                                        <span>Joyvy<br>(design 2010)</span>
+                                                        <span>
+                                                        Joyvy<br>(дизайн 2010)
+                                                        </span>
+                                                    </h3>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-4">
+                                        <div class="project">
+                                            <a href="http://vvictoria.github.io/UIcourse_lecture4-scss/" target="_blank">
+                                                <img class="img-responsive" src="img/projects/cupid-small.jpg" alt="cupid">
+
+                                                <div class="cover">
+                                                    <h3 class="margin-auto" data-translatable>
+                                                        <span>Cupid<br>(design 2004)</span>
+                                                        <span>Cupid<br>(дизайн 2004)
+                                                        </span>
+                                                        
+                                                    </h3>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-4">
+                                        <div class="project">
+                                            <a href="http://vvictoria.github.io/UIcourse_lecture4-less/" target="_blank">
+                                                <img class="img-responsive" src="img/projects/sloto-small.jpg" alt="sloto quest">
+
+                                                <div class="cover">
+                                                    <h3 class="margin-auto" data-translatable>
+                                                        <span>SlotoQuest<br>(design 2000)</span>
+                                                        <span>
+                                                        SlotoQuest<br>(дизайн 2000)
+                                                        </span>
+                                                    </h3>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a name="contacts"></a>
+
+                    <div class="content_contacts display-table">
+                        <div class="cell text-center shadowed">
+                            <h1 data-translatable>
+                                <span>My contacts</span>
+                                <span>Мої контакти</span>
+                            </h1>
+                            
                             <div class="row">
-                                <div class="col-xs-6 col-sm-4">
-                                    <div class="project">
-                                        <a href="http://vvictoria.github.io/scriptum/">
-                                            <img class="img-responsive" src="img/projects/scriptum-small.jpg" alt="scriptum">
-
-                                            <div class="cover">
-                                            <h3 class="margin-auto">
-                                                Scriptum
-                                            </h3>
-                                            </div>
+                                <div class="col-xs-6 col-sm-4 col-sm-offset-2">
+                                    <div class="contact">
+                                        <img src="img/gm-square.png" alt="gmail" class="gm img-circle list-inline">
+                                        <a href="mailto:viniarska.v@gmail.com" class="underline-contact">
+                                            viniarska.v@gmail.com
                                         </a>
                                     </div>
                                 </div>
                                 <div class="col-xs-6 col-sm-4">
-                                    <div class="project">
-                                        <a href="https://vvictoria.github.io/UIcourse_lecture2-3/site/index.html">
-                                            <img class="img-responsive" src="img/projects/mountains-small.jpg" alt="mountains">
-
-                                            <div class="cover">
-                                                <h3 class="margin-auto">
-                                                    Mountains
-                                                </h3>
-                                            </div>
+                                    <div class="contact">
+                                        <img src="img/fb.png" alt="facebook" class="fb list-inline">
+                                        <a href="https://www.facebook.com/viniarska.v" target="_blank" class="underline-contact" data-translatable>
+                                            <span>Me on Facebook</span>
+                                            <span>Я на Facebook</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-sm-offset-2">
+                                    <div class="contact">
+                                        <img src="img/git.png" alt="git" class="git list-inline">
+                                        <a href="https://github.com/vvictoria" target="_blank" class="underline-contact" data-translatable>
+                                            <span>Me on Github</span>
+                                            <span>Я на Github</span>
                                         </a>
                                     </div>
                                 </div>
                                 <div class="col-xs-6 col-sm-4">
-                                    <div class="project">
-                                        <a href="http://vvictoria.github.io/parallax/">
-                                            <img class="img-responsive" src="https://placehold.it/500x500" alt="paralax">
-
-                                            <div class="cover">
-                                                <h3 class="margin-auto">
-                                                    Parallax
-                                                </h3>
-                                            </div>
+                                    <div class="contact">
+                                        <img src="img/li.png" alt="linkedin" class="li list-inline">
+                                        <a href="https://www.linkedin.com/in/victoria-viniarska-5b23b9a9?trk=hp-identity-photo" target="_blank" class="underline-contact" data-translatable>
+                                            <span>Me on LinkedIn</span>
+                                            <span>Я на LinkedIn</span>
                                         </a>
                                     </div>
                                 </div>
-                                <div class="col-xs-6 col-sm-4">
-                                    <div class="project">
-                                        <a href="http://vvictoria.github.io/UIcourse_lecture4-css/">
-                                            <img class="img-responsive" src="img/projects/joyvy-small.jpg" alt="joyvy">
-
-                                            <div class="cover">
-                                                <h3 class="margin-auto">
-                                                    Joyvy<br>(design 2010)
-                                                </h3>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-xs-6 col-sm-4">
-                                    <div class="project">
-                                        <a href="http://vvictoria.github.io/UIcourse_lecture4-scss/">
-                                            <img class="img-responsive" src="https://placehold.it/500x500" alt="cupid">
-
-                                            <div class="cover">
-                                                <h3 class="margin-auto">
-                                                    Cupid<br>(design 2004)
-                                                </h3>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-xs-6 col-sm-4">
-                                    <div class="project">
-                                        <a href="http://vvictoria.github.io/UIcourse_lecture4-less/">
-                                            <img class="img-responsive" src="https://placehold.it/500x500" alt="sloto quest">
-
-                                            <div class="cover">
-                                                <h3 class="margin-auto">
-                                                    SlotoQuest<br>(design 2000)
-                                                </h3>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
+                            </div>
+                            <h1 data-translatable>
+                                <span>My CV</span>
+                                <span>Моє резюме</span>
+                            </h1>
+                                <br>
+                                <a href="files/cv_victoria.pdf">
+                                    <img class="img-circle" src="img/cv.png" alt="cv"/>
+                                </a>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <a name="contacts"></a>
-
-                <div class="content_contacts display-table">
-                    <div class="cell text-center shadowed">
-                        <h1>My contacts</h1>
-                        <div class="row">
-                            <div class="col-xs-6 col-sm-4 col-sm-offset-2">
-                                <div class="contact">
-                                    <img src="img/gm-square.png" alt="gmail" class="gm img-circle list-inline">
-                                    <a href="#">
-                                        viniarska.v@gmail.com
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-6 col-sm-4">
-                                <div class="contact">
-                                    <img src="img/fb.png" alt="facebook" class="fb list-inline">
-                                    <a href="https://www.facebook.com/viniarska.v" class="underline-contact">
-                                        Me on Facebook
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-6 col-sm-4 col-sm-offset-2">
-                                <div class="contact">
-                                    <img src="img/git.png" alt="git" class="git list-inline">
-                                    <a href="https://github.com/vvictoria" class="underline-contact">
-                                        Me on Github
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-xs-6 col-sm-4">
-                                <div class="contact">
-                                    <img src="img/li.png" alt="linkedin" class="li list-inline">
-                                    <a href="https://www.linkedin.com/in/victoria-viniarska-5b23b9a9?trk=hp-identity-photo" class="underline-contact">
-                                        Me on LinkedIn
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <h1>My CV</h1>
-                            <br>
-                            <a href="files/cv_victoria.pdf">
-                                <img class="img-circle" src="img/cv.png" alt="cv"/>
-                            </a>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </body>
